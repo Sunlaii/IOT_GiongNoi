@@ -7,5 +7,5 @@ servo_pin = 9  # Chân 9 ở chế độ servo
 def move_servo(angle):
     """Di chuyển servo đến góc chỉ định."""
     board.servo_config(servo_pin)
-    board.analog[servo_pin].write(angle / 180)  # Chuyển đổi góc thành giá trị từ 0 đến 1
+    board.digital[servo_pin].write(angle)  # Chuyển đổi góc trực tiếp cho servo
     time.sleep(1)
